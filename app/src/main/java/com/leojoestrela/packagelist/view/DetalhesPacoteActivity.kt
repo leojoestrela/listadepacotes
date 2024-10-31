@@ -29,12 +29,15 @@ class DetalhesPacoteActivity : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
 
-        val viewPagerAdapter = DetalhePacoteViewPagerAdapter(supportFragmentManager, lifecycle)
-        viewPagerAdapter.addFragment(StatusDetalhePacoteFragment(), "Status")
-        viewPagerAdapter.addFragment(DadosDetalhePacoteFragment(), "Dados")
+        val (statusDetalhePacoteFragment, dadosDetalhePacoteFragment) = setupFragments()
 
-        binding.detalhesPacoteViewpager.adapter = viewPagerAdapter
+        val viewPagerAdapter =
+            setupViewPagerAdapter(statusDetalhePacoteFragment, dadosDetalhePacoteFragment)
 
+        setupTabLayout(viewPagerAdapter)
+    }
+
+    private fun setupTabLayout(viewPagerAdapter: DetalhePacoteViewPagerAdapter) {
         TabLayoutMediator(
             binding.detalhesPacoteTablayout,
             binding.detalhesPacoteViewpager
@@ -42,6 +45,34 @@ class DetalhesPacoteActivity : AppCompatActivity() {
             tab.text = viewPagerAdapter.getPageTitle(position)
             binding.detalhesPacoteViewpager.setCurrentItem(tab.position, true)
         }.attach()
-
     }
+
+    private fun setupViewPagerAdapter(
+        statusDetalhePacoteFragment: StatusDetalhePacoteFragment,
+        dadosDetalhePacoteFragment: DadosDetalhePacoteFragment
+    ): DetalhePacoteViewPagerAdapter {
+        val viewPagerAdapter = DetalhePacoteViewPagerAdapter(supportFragmentManager, lifecycle)
+        viewPagerAdapter.addFragment(statusDetalhePacoteFragment, "Status")
+        viewPagerAdapter.addFragment(dadosDetalhePacoteFragment, "Dados")
+
+        binding.detalhesPacoteViewpager.adapter = viewPagerAdapter
+        return viewPagerAdapter
+    }
+
+    private fun setupFragments(): Pair<StatusDetalhePacoteFragment, DadosDetalhePacoteFragment> {
+        val statusDetalhePacoteFragment = StatusDetalhePacoteFragment()
+        val dadosDetalhePacoteFragment = DadosDetalhePacoteFragment()
+
+        val pacoteBundle = Bundle()
+        pacoteBundle.putParcelable("pacote", pacote)
+
+        val statusPacoteBundle = Bundle()
+        statusPacoteBundle.putParcelableArrayList("status_pacote", pacote.statusPacote)
+
+        statusDetalhePacoteFragment.arguments = statusPacoteBundle
+        dadosDetalhePacoteFragment.arguments = pacoteBundle
+        return Pair(statusDetalhePacoteFragment, dadosDetalhePacoteFragment)
+    }
+
 }
+

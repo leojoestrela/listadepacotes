@@ -34,6 +34,8 @@ class ListaPacotesAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(pacote: Pacote) {
+            binding.pacoteItemCodigoPacote.text = pacote.codigo
+
             binding.root.setOnClickListener {
                 val intent = Intent(binding.root.context, DetalhesPacoteActivity::class.java)
                 intent.putExtra("pacote", pacote)

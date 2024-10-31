@@ -51,14 +51,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="160500003517-85"
                 android:textAllCaps="true"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/textview_codigo_pacote"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="160500003517-85" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_dados_codigo"
@@ -99,14 +99,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1 Região"
                 android:textAllCaps="true"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/textview_ponto_entrega_pacote"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1 Região" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_dados_ponto_entrega"
@@ -147,14 +147,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="Natal/RN"
                 android:textAllCaps="true"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/textview_municipio_pacote"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Natal/RN" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_dados_municipio"
@@ -195,14 +195,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="Escola Estadual Nome Tal"
                 android:textAllCaps="true"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/textview_escola_pacote"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Escola Estadual Nome Tal" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_dados_escola"
@@ -243,14 +243,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="2° ano Ensino Fundamental"
                 android:textAllCaps="true"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/textview_ano_escolar_pacote"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2° ano Ensino Fundamental" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_dados_ano_escolar"
@@ -291,14 +291,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="Língua Portuguesa"
                 android:textAllCaps="true"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/textview_componente_curricular_pacote"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Língua Portuguesa" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_dados_componente_curricular"

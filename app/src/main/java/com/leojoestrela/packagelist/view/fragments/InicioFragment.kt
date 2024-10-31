@@ -36,7 +36,7 @@ class InicioFragment : Fragment() {
         binding.inicioRecyclerviewListaPacotes.adapter = listaPacotesAdapter
     }
 
-    fun createMock(): ArrayList<Pacote> {
+    private fun createMock(): ArrayList<Pacote> {
         val list: ArrayList<Pacote> = ArrayList()
         val listStatus: ArrayList<StatusPacote> = ArrayList()
 

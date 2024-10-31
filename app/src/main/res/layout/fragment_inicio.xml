@@ -71,11 +71,28 @@
                         android:id="@+id/inicio_pacote_porcentagem"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
-                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginStart="20dp"
                         android:layout_marginTop="16dp"
-                        android:background="#AEF3FE"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/view_rounded"
+                        android:backgroundTint="#AEF3FE"
+                        app:layout_constraintEnd_toStartOf="@id/inicio_pacote_recebidos_faltante_porcentagem"
+                        app:layout_constraintHorizontal_weight="0.75"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_recebimento_pacotes" />
+
+                    <View
+                        android:id="@+id/inicio_pacote_recebidos_faltante_porcentagem"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/view_rounded"
+                        android:backgroundTint="#E0E0E0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="0.25"
+                        app:layout_constraintStart_toEndOf="@id/inicio_pacote_porcentagem"
                         app:layout_constraintTop_toBottomOf="@id/inicio_text_recebimento_pacotes" />
 
                     <View
@@ -83,7 +100,8 @@
                         android:layout_width="8dp"
                         android:layout_height="8dp"
                         android:layout_marginTop="3dp"
-                        android:background="#AEF3FE"
+                        android:background="@drawable/view_rounded"
+                        android:backgroundTint="#AEF3FE"
                         app:layout_constraintStart_toStartOf="@id/inicio_pacote_porcentagem"
                         app:layout_constraintTop_toTopOf="@id/inicio_text_recebidos_legenda" />
 
@@ -115,21 +133,22 @@
                         android:id="@+id/inicio_text_recebidos_porcentagem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:textColor="#969696"
-                        android:text="75%"
-                        android:textStyle="bold"
                         android:layout_marginEnd="20dp"
-                        app:layout_constraintTop_toTopOf="@id/inicio_text_recebidos_legenda"
+                        android:text="75%"
+                        android:textColor="#969696"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_recebidos"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_recebidos"/>
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_recebidos_legenda" />
 
                     <View
                         android:id="@+id/inicio_view_faltantes_legenda"
                         android:layout_width="8dp"
                         android:layout_height="8dp"
                         android:layout_marginTop="3dp"
-                        android:background="#E0E0E0"
+                        android:background="@drawable/view_rounded"
+                        android:backgroundTint="#E0E0E0"
                         app:layout_constraintStart_toStartOf="@id/inicio_pacote_porcentagem"
                         app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_legenda" />
 
@@ -161,14 +180,14 @@
                         android:id="@+id/inicio_text_recebidos_faltantes_porcentagem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:textColor="#969696"
-                        android:text="25%"
-                        android:textStyle="bold"
                         android:layout_marginEnd="20dp"
-                        app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_legenda"
+                        android:text="25%"
+                        android:textColor="#969696"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_faltantes"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_faltantes"/>
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_legenda" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -207,11 +226,28 @@
                         android:id="@+id/inicio_view_devolucao_pacote_porcentagem"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
-                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginStart="20dp"
                         android:layout_marginTop="16dp"
-                        android:background="#3656FF"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/view_rounded"
+                        android:backgroundTint="#3656FF"
+                        app:layout_constraintEnd_toStartOf="@id/inicio_pacote_devolvidos_faltante_porcentagem"
+                        app:layout_constraintHorizontal_weight="0.75"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_devolucao_pacotes" />
+
+                    <View
+                        android:id="@+id/inicio_pacote_devolvidos_faltante_porcentagem"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/view_rounded"
+                        android:backgroundTint="#E0E0E0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="0.25"
+                        app:layout_constraintStart_toEndOf="@id/inicio_view_devolucao_pacote_porcentagem"
                         app:layout_constraintTop_toBottomOf="@id/inicio_text_devolucao_pacotes" />
 
                     <View
@@ -219,7 +255,8 @@
                         android:layout_width="8dp"
                         android:layout_height="8dp"
                         android:layout_marginTop="3dp"
-                        android:background="#3656FF"
+                        android:background="@drawable/view_rounded"
+                        android:backgroundTint="#3656FF"
                         app:layout_constraintStart_toStartOf="@id/inicio_view_devolucao_pacote_porcentagem"
                         app:layout_constraintTop_toTopOf="@id/inicio_text_devolucao_legenda" />
 
@@ -251,21 +288,22 @@
                         android:id="@+id/inicio_text_devolvidos_porcentagem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:textColor="#969696"
-                        android:text="75%"
-                        android:textStyle="bold"
                         android:layout_marginEnd="20dp"
-                        app:layout_constraintTop_toTopOf="@id/inicio_text_devolucao_legenda"
+                        android:text="75%"
+                        android:textColor="#969696"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_devolvidos"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_devolvidos"/>
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_devolucao_legenda" />
 
                     <View
                         android:id="@+id/inicio_view_faltantes_devolvidos_legenda"
                         android:layout_width="8dp"
                         android:layout_height="8dp"
                         android:layout_marginTop="3dp"
-                        android:background="#E0E0E0"
+                        android:background="@drawable/view_rounded"
+                        android:backgroundTint="#E0E0E0"
                         app:layout_constraintStart_toStartOf="@id/inicio_view_devolucao_pacote_porcentagem"
                         app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_devolvidos_legenda" />
 
@@ -297,14 +335,14 @@
                         android:id="@+id/inicio_text_devolvidos_falt_porcentagem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:textColor="#969696"
-                        android:text="25%"
-                        android:textStyle="bold"
                         android:layout_marginEnd="20dp"
-                        app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_devolvidos_legenda"
+                        android:text="25%"
+                        android:textColor="#969696"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_faltantes_devolvidos"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_faltantes_devolvidos"/>
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_devolvidos_legenda" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>

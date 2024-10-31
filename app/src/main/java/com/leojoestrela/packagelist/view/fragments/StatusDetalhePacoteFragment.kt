@@ -12,14 +12,14 @@ import com.leojoestrela.packagelist.view.adapters.StatusDetalhePacoteAdapter
 
 
 class StatusDetalhePacoteFragment : Fragment() {
-    private var statusPacote: StatusPacote? = null
+    private var statusPacote: ArrayList<StatusPacote>? = null
 
     private lateinit var binding: FragmentStatusDetalhePacoteBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            statusPacote = it.getParcelable("statuspacote")
+            statusPacote = it.getParcelableArrayList("status_pacote")
         }
     }
 
@@ -34,7 +34,7 @@ class StatusDetalhePacoteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val statusDetalheAdapter = StatusDetalhePacoteAdapter(ArrayList())
+        val statusDetalheAdapter = StatusDetalhePacoteAdapter(statusPacote!!)
 
         binding.recyclerDetalheStatus.layoutManager = LinearLayoutManager(context)
         binding.recyclerDetalheStatus.adapter = statusDetalheAdapter
