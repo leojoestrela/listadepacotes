@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.fragments.InicioFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/inicio_appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/inicio_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back_24"
+            app:title="@string/listagem_de_pacotes" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/inicio_scrollview_info_pacotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inicio_appbarlayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/inicio_card_recebimentos_pacotes"
+                style="?attr/materialCardViewFilledStyle"
+                android:layout_width="320dp"
+                android:layout_height="214dp"
+                android:layout_marginStart="20dp"
+                app:cardBackgroundColor="@color/card_bg_grey"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/inicio_text_recebimento_pacotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/recebimento_de_pacotes"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/inicio_pacote_porcentagem"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#AEF3FE"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_recebimento_pacotes" />
+
+                    <View
+                        android:id="@+id/inicio_view_recebidos_legenda"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#AEF3FE"
+                        app:layout_constraintStart_toStartOf="@id/inicio_pacote_porcentagem"
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_recebidos_legenda" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_recebidos_legenda"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/recebidos"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/inicio_view_recebidos_legenda"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_pacote_porcentagem" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_numero_pacotes_recebidos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="1560 pacotes"
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/inicio_text_recebidos_legenda"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_recebidos_legenda" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_recebidos_porcentagem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#969696"
+                        android:text="75%"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_recebidos_legenda"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_recebidos"/>
+
+                    <View
+                        android:id="@+id/inicio_view_faltantes_legenda"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#E0E0E0"
+                        app:layout_constraintStart_toStartOf="@id/inicio_pacote_porcentagem"
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_legenda" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_faltantes_legenda"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/faltantes"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/inicio_text_recebidos_legenda"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_numero_pacotes_recebidos" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_numero_pacotes_faltantes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="440 pacotes"
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/inicio_text_faltantes_legenda"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_faltantes_legenda" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_recebidos_faltantes_porcentagem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#969696"
+                        android:text="25%"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_legenda"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_faltantes"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/inicio_card_devolucao_pacotes"
+                style="?attr/materialCardViewFilledStyle"
+                android:layout_width="320dp"
+                android:layout_height="214dp"
+                android:layout_marginStart="20dp"
+                app:cardBackgroundColor="@color/card_bg_grey"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/inicio_card_recebimentos_pacotes"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/inicio_text_devolucao_pacotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/devolu_o_de_pacotes"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/inicio_view_devolucao_pacote_porcentagem"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#3656FF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_devolucao_pacotes" />
+
+                    <View
+                        android:id="@+id/inicio_view_devolucao_legenda"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#3656FF"
+                        app:layout_constraintStart_toStartOf="@id/inicio_view_devolucao_pacote_porcentagem"
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_devolucao_legenda" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_devolucao_legenda"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/recebidos"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/inicio_view_devolucao_legenda"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_view_devolucao_pacote_porcentagem" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_numero_pacotes_devolvidos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="1560 pacotes"
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/inicio_text_devolucao_legenda"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_devolucao_legenda" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_devolvidos_porcentagem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#969696"
+                        android:text="75%"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_devolucao_legenda"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_devolvidos"/>
+
+                    <View
+                        android:id="@+id/inicio_view_faltantes_devolvidos_legenda"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#E0E0E0"
+                        app:layout_constraintStart_toStartOf="@id/inicio_view_devolucao_pacote_porcentagem"
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_devolvidos_legenda" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_faltantes_devolvidos_legenda"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/faltantes"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/inicio_text_devolucao_legenda"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_numero_pacotes_devolvidos" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_numero_pacotes_faltantes_devolvidos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="440 pacotes"
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/inicio_text_faltantes_devolvidos_legenda"
+                        app:layout_constraintTop_toBottomOf="@id/inicio_text_faltantes_devolvidos_legenda" />
+
+                    <TextView
+                        android:id="@+id/inicio_text_devolvidos_falt_porcentagem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#969696"
+                        android:text="25%"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintTop_toTopOf="@id/inicio_text_faltantes_devolvidos_legenda"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/inicio_text_numero_pacotes_faltantes_devolvidos"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/inicio_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inicio_scrollview_info_pacotes" />
+
+    <ImageButton
+        android:id="@+id/inicio_button_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_filter_24"
+        app:layout_constraintStart_toStartOf="@id/inicio_divider"
+        app:layout_constraintTop_toBottomOf="@id/inicio_divider" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/lista_de_pacotes"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/inicio_button_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inicio_button_filter"
+        app:layout_constraintTop_toTopOf="@id/inicio_button_filter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inicio_recyclerview_lista_pacotes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inicio_button_filter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

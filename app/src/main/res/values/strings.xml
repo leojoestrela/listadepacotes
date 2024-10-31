@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Package List</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="inicio">Início</string>
+    <string name="opcoes">Opções</string>
+    <string name="tutoriais">Tutoriais</string>
+    <string name="recebimento_de_pacotes">Recebimento de pacotes</string>
+    <string name="recebidos">Recebidos</string>
+    <string name="faltantes">Faltantes</string>
+    <string name="devolu_o_de_pacotes">Devolução de pacotes</string>
+    <string name="lista_de_pacotes">Lista de Pacotes</string>
+    <string name="listagem_de_pacotes">Listagem de Pacotes</string>
+    <string name="status">Status</string>
+    <string name="dados">Dados</string>
+    <string name="status_do_pacote">Status do pacote</string>
+    <string name="dados_da_caixa">Dados da caixa</string>
+    <string name="codigo">Código</string>
+    <string name="municipio">Município</string>
+    <string name="escola">Escola</string>
+    <string name="ano_escolar_etapa">Ano escolar/Etapa</string>
+    <string name="ponto_de_entrega">Ponto de entrega</string>
+    <string name="componente_curricular">Componente Curricular</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

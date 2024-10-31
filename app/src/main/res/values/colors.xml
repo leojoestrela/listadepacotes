@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="text_grey">#757575</color>
+    <color name="edit_text_background_grey">#F0F0F0</color>
+    <color name="button_yellow_login">#FFFF00</color>
+
+    <color name="navbarview_item_selected">#cde7ec</color>
+
+    <color name="card_bg_grey">#F0F0F0</color>
+</resources>
